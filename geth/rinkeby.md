@@ -1,6 +1,7 @@
 # Setting up Rinkeby testnet
 
-Note: This is the set up for a full node. Alternate options are here: 
+Note: This is the set up for a full node. Alternate options are here: https://www.rinkeby.io/
+
 #### Step 1: Download Geth
 Download the latest geth (1.6.1) to your laptop. https://geth.ethereum.org/downloads/
 
@@ -89,6 +90,8 @@ Now, back in your geth console, wait for at most 1 minute seconds for the next b
 
 Wala! you're done :)
 
+
+#### Other stuff
 Next time you need to run geth again, simply run the command:
 ```
 geth --networkid=4 --datadir=$HOME/.rinkeby --cache=512 --ethstats='yournode:Respect my authoritah!@stats.rinkeby.io' --bootnodes=enode://a24ac7c5484ef4ed0c5eb2d36620ba4e4aa13b8c84684e1b4aab0cebea2ae45cb4d375b77eab56516d34bfbd3c1a833fc51296ff084b770b94fb9028c4d25ccf@52.169.42.101:30303 --rpc --rpcapi="personal,eth,network"
@@ -102,3 +105,10 @@ geth attach
 ```
 
 and you're all set!
+
+If you're using Metamask to connect to this local node, you'd need to add the below flag when you start up geth:
+```--rpccorsdomain="chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn"``` 
+
+
+
+
