@@ -1,6 +1,4 @@
-# Geth
-
-## Setting up Rinkeby testnet
+# Setting up Rinkeby testnet
 
 Note: This is the set up for a full node. Alternate options are here: 
 #### Step 1: Download Geth
@@ -59,9 +57,9 @@ instance: Geth/v1.6.1-stable-021c3c28/darwin-amd64/go1.8.1
 > eth.accounts
 []
 > personal.newAccount("helloWorldNotARealPassword")
-"0xb2e9fe08ca9a0323103883fe12c9609ed380f475"
+"0x8e9aebc1cd7f76ebc092787c1d7075e2ad03c107"
 > eth.coinbase
-"0xb2e9fe08ca9a0323103883fe12c9609ed380f475"
+"0x8e9aebc1cd7f76ebc092787c1d7075e2ad03c107"
 > eth.getBalance(eth.coinbase)
 0
 ```
@@ -90,3 +88,17 @@ Now, back in your geth console, wait for at most 1 minute seconds for the next b
 ```
 
 Wala! you're done :)
+
+Next time you need to run geth again, simply run the command:
+```
+geth --networkid=4 --datadir=$HOME/.rinkeby --cache=512 --ethstats='yournode:Respect my authoritah!@stats.rinkeby.io' --bootnodes=enode://a24ac7c5484ef4ed0c5eb2d36620ba4e4aa13b8c84684e1b4aab0cebea2ae45cb4d375b77eab56516d34bfbd3c1a833fc51296ff084b770b94fb9028c4d25ccf@52.169.42.101:30303 --rpc --rpcapi="personal,eth,network"
+```
+
+and then in a new terminal window, run:
+
+```
+ln -s ~/.rinkeby/geth.ipc ~/Library/Ethereum
+geth attach
+```
+
+and you're all set!
