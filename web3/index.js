@@ -14,6 +14,10 @@ web3.eth.defaultAccount = /* Add default account here
                             (used as the default "from" property, if no "from" property is specified) 
                           */
 
+// Get current blockNumber
+web3.eth.getBlockNumber()
+.then(console.log);
+                          
 const contractAbi = /* Add contract ABI here */
 
 const contractAddress = /* Add contract Address here */
