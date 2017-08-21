@@ -1,0 +1,14 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Preethi Kasireddy",
+  "license": "ISC",
+  "dependencies": {
+    "web3": "^1.0.0-beta.18"
+  }
+}
