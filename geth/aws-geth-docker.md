@@ -3,7 +3,7 @@
 One of the quickest ways to get Ethereum up and running is by using Docker:
 
 ```
-docker run -it -p 8545:8545 -p 30303:30303 ethereum/client-go --rpc --rpcaddr "0.0.0.0" --rpcapi "web3,eth,net" --txpool.accountslots=256 --txpool.globalslots=20000 --txpool.accountqueue=256 --txpool.globalqueue=20000 --cache 512 
+docker run -it -p 8545:8545 -p 30303:30303 ethereum/client-go --rpc --rpcaddr "0.0.0.0" --rpcapi "web3,eth,net,db" --txpool.accountslots=256 --txpool.globalslots=20000 --txpool.accountqueue=256 --txpool.globalqueue=20000 --cache 512 
 ```
 
 Make sure to expose ports `8545` and `30303`. 
